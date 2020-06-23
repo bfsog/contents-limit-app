@@ -7,7 +7,7 @@
                 @item.Name 
                 <span class="float-right">
                     @item.Cost.ToString("C") 
-                    <span class="delete-item" data-item-id="@item.Id" data-item-name="@item.Name" data-category-name="@Model.CategoryType"><i class="far fa-trash-alt" title="Delete this item"></i></span>
+                    <span class="delete-item" data-item-id="@item.Id" data-item-name="@item.Name" data-category-name="@Model.CategoryType"><i class="far fa-trash-alt" style="cursor: pointer;" title="Delete this item"></i></span>
                 </span>
             </li>
         }

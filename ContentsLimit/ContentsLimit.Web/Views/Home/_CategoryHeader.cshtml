@@ -4,6 +4,6 @@
     <strong>@Model.CurrentCategory </strong>
     <span class="float-right pad-right">
         @Model.CategoryItems.Sum(s => s.Cost).ToString("C") 
-        <span class="delete-cat-item" data-category-name="@Model.CurrentCategory" data-category-id="@((int)Model.CurrentCategory)"><i class="far fa-trash-alt" title="Delete all items in this category"></i></span>
+        <span class="delete-cat-item" data-category-name="@Model.CurrentCategory" data-category-id="@((int)Model.CurrentCategory)"><i class="far fa-trash-alt" style="cursor: pointer;" title="Delete all items in this category"></i></span>
     </span>
 </p>

@@ -30,9 +30,6 @@ String.Format = function (b) {
                     success: function (data) { location.reload(); }
                 });
             }
-            else {
-                alert("Delete cancelled.");
-            }
         });
         $(".delete-item").on('click', function (e) {
             var itemId = $(this).data("item-id");
