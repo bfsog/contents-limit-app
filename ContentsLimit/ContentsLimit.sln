@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContentsLimit.Business", "C
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ContentsLimit.Database", "ContentsLimit.Database\ContentsLimit.Database.sqlproj", "{5F069F5B-1FBE-488F-B6EA-B83921F9D913}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business.Tests", "Business.Tests\Business.Tests.csproj", "{2C484C11-8EE0-4C93-9C65-7069F111E0FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{5F069F5B-1FBE-488F-B6EA-B83921F9D913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F069F5B-1FBE-488F-B6EA-B83921F9D913}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F069F5B-1FBE-488F-B6EA-B83921F9D913}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2C484C11-8EE0-4C93-9C65-7069F111E0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C484C11-8EE0-4C93-9C65-7069F111E0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C484C11-8EE0-4C93-9C65-7069F111E0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C484C11-8EE0-4C93-9C65-7069F111E0FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
