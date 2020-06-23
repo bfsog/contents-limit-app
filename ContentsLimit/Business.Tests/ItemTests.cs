@@ -67,7 +67,7 @@ namespace Business.Tests
         }
 
         /// <summary>
-        /// Test to assert that category 12equals the corresponding value in the category type enum.
+        /// Test to assert that category 2 equals the corresponding value in the category type enum.
         /// <see cref="ContentsLimit.Business.Models.Category.CategoryType"/>
         /// </summary>
         [TestMethod]
