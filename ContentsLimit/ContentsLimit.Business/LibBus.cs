@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ContentsLimit.Business
+﻿namespace ContentsLimit.Business
 {
     /// <summary>
     /// Helper class for messages displayed to the user.

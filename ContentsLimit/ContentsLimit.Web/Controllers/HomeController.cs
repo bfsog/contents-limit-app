@@ -22,11 +22,12 @@ namespace ContentsLimit.Web.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ViewModels.ContentItemModel model)
         {
-            // I do my validations up front so I know after this line we are good to go, no application issue should occur after this, if something breaks it is infrastructure (memory, db connection etc).
-            var validItem = CreateItemValidationPassed(model);
-            if(!validItem)
+            // I do my validations up front so I know after this line we are good to go, no application issue should occur after this. 
+            // if something breaks it is infrastructure (memory, db connection etc).
+            var createItemValidation = new Business.ItemValidator().CreateItemIsValid(new Business.Models.ContentItem() { CategoryId =(int) model.Category });
+            if(!createItemValidation.IsValid)
             {
-                this.AddMessage(MessageType.Error, string.Format(LibBus.ERROR_CATEGORY_NOT_SET));
+                this.AddMessage(MessageType.Error, createItemValidation.Message);
                 return RedirectToAction("Index");
             }
 
@@ -36,22 +37,6 @@ namespace ContentsLimit.Web.Controllers
                 this.AddMessage(MessageType.Success, string.Format(Business.LibBus.SUCCESS_ITEM_CREATED, model.Name, model.Category));
             }
             return RedirectToAction("Index");
-        }
-
-        /// <summary>
-        /// Basic validation to show the approach.
-        /// Returns true if the category is set. Spec asked for no validation but as items are tightly linked to categories, just putting this here to show how.
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        private bool CreateItemValidationPassed(ViewModels.ContentItemModel model)
-        {
-            var valid = true;
-            if ((int)model.Category == 0)
-            {
-                valid = false;
-            }
-            return valid;
         }
 
         /// <summary>

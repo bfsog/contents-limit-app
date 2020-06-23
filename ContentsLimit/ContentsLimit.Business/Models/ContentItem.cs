@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ContentsLimit.Business.Models
+﻿namespace ContentsLimit.Business.Models
 {
     /// <summary>
     /// Class which reflects our persistent database schema. Use this class when inserting new record.

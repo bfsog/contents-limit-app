@@ -5,14 +5,12 @@ namespace ContentsLimit.Web
 {
 	public abstract class BaseController : Controller
 	{
-
 		protected readonly DataContext Db;
 
 		protected BaseController(DataContext db)
 		{
 			Db = db;
 		}
-
 
 		/// <summary>Use for sending a message to another screen via TempData.</summary>
 		/// <param name="type"></param>
