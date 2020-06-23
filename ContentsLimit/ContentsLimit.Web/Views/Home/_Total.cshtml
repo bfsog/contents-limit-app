@@ -1,0 +1,13 @@
+﻿@model ContentsLimit.Web.ViewModels.HomeIndexViewModel
+@{
+    var total = Model.ExistingItems.Sum(s => s.Cost);
+    var distinctCategories = Model.ExistingItems.Select(s => s.Category).Distinct().Count();
+    if (total == 0)
+    {
+        <p ><span class="imp-text">No items!</span> You should create one!</p>
+    }
+    else
+    {
+        <p ><span class="imp-text">Total @total.ToString("C")</span> across @distinctCategories @(distinctCategories == 1 ? "category" : "categories")</p>
+    }
+}

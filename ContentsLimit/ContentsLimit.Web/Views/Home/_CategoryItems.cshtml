@@ -1,0 +1,14 @@
+﻿@using ContentsLimit.Web.ViewModels 
+@model CategoryListModel
+    <ul class="clearlist">
+        @foreach (var item in Model.CategoryItems)
+        {
+            <li>
+                @item.Name 
+                <span class="float-right">
+                    @item.Cost.ToString("C") 
+                    <span class="delete-item" data-item-id="@item.Id" data-item-name="@item.Name" data-category-name="@Model.CategoryType"><i class="far fa-trash-alt" title="Delete this item"></i></span>
+                </span>
+            </li>
+        }
+    </ul>

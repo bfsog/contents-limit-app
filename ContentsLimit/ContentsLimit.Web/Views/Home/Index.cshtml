@@ -1,0 +1,38 @@
+﻿@using ContentsLimit.Web.ViewModels 
+@model ContentsLimit.Web.ViewModels.HomeIndexViewModel
+@{
+    ViewData["Title"] = "Contents List App";
+}
+    <div class="row">
+        <div class="col">
+            <h1>Manage Content Items</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8 items">
+            @foreach (var category in Model.ExistingItems.GroupBy(g => g.Category).OrderBy(o => o.Key))
+            {
+                var currentCategoryItems = Model.ExistingItems.Where(q => q.Category == category.Key).ToList();
+
+            <div>
+                <partial name="_CategoryHeader" ,
+                         model="new CategoryHeaderModel() {
+                        CurrentCategory = category.Key,
+                        CategoryItems = currentCategoryItems
+                    }" />
+
+                <partial name="_CategoryItems" ,
+                         model="new CategoryListModel() {
+                        CategoryType = category.Key,
+                        CategoryItems = currentCategoryItems
+                    }" />
+            </div>
+            }
+            <partial name="_Total" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <partial name="_Create" />
+        </div>
+    </div>

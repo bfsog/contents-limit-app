@@ -1,0 +1,7 @@
+﻿1. Right click Database project
+2. Publish 
+3. Click Edit on the target database connection
+4. Enter your server name and credentials. Leave database name as ContentsLimit.Database
+5. Click Publish
+6. Database is completed and the post deployment script has been run. Check dbo.Categories and dbo.Items, should be data in there.
+7. Run the Web project.

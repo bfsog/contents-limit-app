@@ -1,0 +1,14 @@
+﻿<hr />
+<h3>Create New Item</h3>
+<form class="form-inline" asp-action="Create" method="post">
+    <label for="Name" class="mr-sm-2">Name:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Item Name" id="Name" name="Name">
+    <label for="Value" class="mr-sm-2">Value:</label>
+    <input type="number" class="form-control mb-2 mr-sm-2" min="0" max="5000" value="0" id="Cost" name="Cost">
+    <select id="Category" name="Category"
+            class="form-control mb-2 mr-sm-2"
+            asp-items="Html.GetEnumSelectList<ContentsLimit.Business.Models.Category.CategoryType>()">
+        <option>Select category</option>
+    </select>
+    <button type="submit" class="btn btn-primary mb-2" title="Create new item">Create</button>
+</form>
