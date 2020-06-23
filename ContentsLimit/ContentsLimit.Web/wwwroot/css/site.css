@@ -81,5 +81,5 @@ body {
 }
 
 .items > div:nth-of-type(odd) {
-    background-color: #eee;
+    background-color: #ddd;
 }
